@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    background-color: #d4f4d4;
+    text-align: center;
+    padding: 2rem;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+nav {
+    padding: 0.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #4caf50;
+    font-weight: bold;
+}
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    padding: 1rem;
+}
+
+main h2 {
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+    margin-left: 160px;
+}
+
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align items horizontally */
+    justify-content: center; /* Center-align items vertically */
+    text-align: center; /* Center-align text */
+    padding: 1rem;
+    margin-left: 20px;
+}
+
+
+.product img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product h2 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0.5rem 0;
+}
+
+.product p {
+    color: #555;
+}
+
+.product .price {
+    font-weight: bold;
+    color: #4caf50;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+}
+
+footer {
+    width: 100%;
+    background-color: green;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    main h2 {
+        font-size: 1.3rem;
+    }
+
+    .product img {
+        max-height: 150px;
+    }
+
+    .product h2 {
+        font-size: 1.1rem;
+    }
+
+    .product .price {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+
+    .product img {
+        max-height: 120px;
+    }
+
+    .product h2 {
+        font-size: 1rem;
+    }
+
+    .product p {
+        font-size: 0.9rem;
+    }
+
+    .product .price {
+        font-size: 0.9rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
